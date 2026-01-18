@@ -3,37 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Château 1</title>
+    <title>Visite des Châteaux</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Château 1</h1>
+        <h1>Bienvenue sur le site des Châteaux</h1>
+        <p>Découvrez les châteaux et testez vos connaissances avec des QCM !</p>
     </header>
 
-    <!-- Formulaire de validation du code -->
-    <section id="validation-code">
-        <h2>Entrez le code pour accéder à la visite :</h2>
-        <input type="text" id="code-chateau" placeholder="Code du château" required>
-        <button id="valider-code">Valider</button>
-        <p id="message-code"></p>
-    </section>
-
-    <!-- Contenu du château, caché tant que le code n'est pas validé -->
-    <main id="contenu-chateau" style="display:none;">
-        <section>
-            <img src="images/chateau1.jpg" alt="Château 1">
-            <p>Description du Château 1.</p>
-        </section>
-
-        <button id="btn-qcm">Accéder au QCM</button>
+    <main>
+        <h2>Les Châteaux :</h2>
+        <div class="chateaux">
+            <div class="chateau">
+                <img src="images/chateau1.jpg" alt="Château 1">
+                <p>Château 1</p>
+            </div>
+            <div class="chateau">
+                <img src="images/chateau2.jpg" alt="Château 2">
+                <p>Château 2</p>
+            </div>
+            <div class="chateau">
+                <img src="images/chateau3.jpg" alt="Château 3">
+                <p>Château 3</p>
+            </div>
+        </div>
+        <p>Pour visiter un château, scannez le QR code correspondant sur place.</p>
     </main>
 
     <footer>
         <p>© 2026 Visite des Châteaux</p>
     </footer>
-
-    <script src="script-chateau1.js"></script>
 </body>
 </html>
-
