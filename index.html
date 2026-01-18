@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visite des Châteaux</title>
+    <title>Château 1</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur le site des Châteaux</h1>
-        <p>Découvrez les châteaux et testez vos connaissances avec des QCM !</p>
+        <h1>Château 1</h1>
     </header>
 
-    <h2>Débloquer une visite</h2>
-        <form id="form-code">
-        <label for="code">Entrez le code du château :</label>
-        <input type="text" id="code" required>
-        <select id="chateau-select">
-            <option value="chateau1">Château 1</option>
-            <option value="chateau2">Château 2</option>
-            <option value="chateau3">Château 3</option>
-        </select>
-        <button type="submit">Valider</button>
-    </form>
-    
-<p id="message"></p>
+    <!-- Formulaire de validation du code -->
+    <section id="validation-code">
+        <h2>Entrez le code pour accéder à la visite :</h2>
+        <input type="text" id="code-chateau" placeholder="Code du château" required>
+        <button id="valider-code">Valider</button>
+        <p id="message-code"></p>
+    </section>
+
+    <!-- Contenu du château, caché tant que le code n'est pas validé -->
+    <main id="contenu-chateau" style="display:none;">
+        <section>
+            <img src="images/chateau1.jpg" alt="Château 1">
+            <p>Description du Château 1.</p>
+        </section>
+
+        <button id="btn-qcm">Accéder au QCM</button>
+    </main>
 
     <footer>
         <p>© 2026 Visite des Châteaux</p>
     </footer>
+
+    <script src="script-chateau1.js"></script>
 </body>
 </html>
 

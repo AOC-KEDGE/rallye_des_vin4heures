@@ -9,39 +9,30 @@
 <body>
     <header>
         <h1>Château 2</h1>
-        <a href="index.html">← Retour à l’accueil</a>
     </header>
 
-    <main>
+    <!-- Formulaire de validation du code -->
+    <section id="validation-code">
+        <h2>Entrez le code pour accéder à la visite :</h2>
+        <input type="text" id="code-chateau" placeholder="Code du château" required>
+        <button id="valider-code">Valider</button>
+        <p id="message-code"></p>
+    </section>
+
+    <!-- Contenu du château, caché tant que le code n'est pas validé -->
+    <main id="contenu-chateau" style="display:none;">
         <section>
             <img src="images/chateau2.jpg" alt="Château 2">
             <p>Description du Château 2.</p>
         </section>
 
-        <section id="qcm">
-            <h2>Testez vos connaissances</h2>
-            <form id="form-qcm2">
-                <p>1. Combien de tours possède le château ?</p>
-                <label><input type="radio" name="q1" value="A"> 2</label><br>
-                <label><input type="radio" name="q1" value="B"> 4</label><br>
-                <label><input type="radio" name="q1" value="C"> 6</label><br>
-
-                <p>2. Quelle rivière passe à proximité ?</p>
-                <label><input type="radio" name="q2" value="A"> Loire</label><br>
-                <label><input type="radio" name="q2" value="B"> Seine</label><br>
-                <label><input type="radio" name="q2" value="C"> Rhône</label><br>
-
-                <br>
-                <button type="button" onclick="verifierQCM('form-qcm2', 'resultat2')">Valider</button>
-            </form>
-            <p id="resultat2"></p>
-        </section>
+        <button id="btn-qcm">Accéder au QCM</button>
     </main>
 
     <footer>
         <p>© 2026 Visite des Châteaux</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="chateau2.js"></script>
 </body>
 </html>
