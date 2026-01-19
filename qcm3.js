@@ -23,7 +23,7 @@ btnValiderQCM.addEventListener("click", () => {
         }
     }
 
-    localStorage.setItem("chateau3_score", score);
+    localStorage.setItem("chateau1_score", score);
     alert("Votre score : " + score + " / 2\nVous allez être redirigé vers la page d'accueil.");
     window.location.href = "index.html";
 });

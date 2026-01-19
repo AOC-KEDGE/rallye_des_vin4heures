@@ -1,23 +1,21 @@
-// === CODE DE VALIDATION POUR LE CHÂTEAU ===
-const codeChateau3 = "CODE3"; // mettre le code réel que tu mettras dans le QR code
+const codeChateau3 = "CODE3"; // code réel du château
 
 const btnValider = document.getElementById("valider-code");
 const inputCode = document.getElementById("code-chateau");
 const message = document.getElementById("message-code");
 const contenuChateau = document.getElementById("contenu-chateau");
+const validationBloc = document.getElementById("validation-code");
 
-// Vérifie si le participant a déjà validé le code
-if (localStorage.getItem("chateau3_access") === "true") {
-    document.getElementById("validation-code").style.display = "none";
-    contenuChateau.style.display = "block";
-}
+// 🔒 AU CHARGEMENT : on force toujours la validation
+validationBloc.style.display = "block";
+contenuChateau.style.display = "none";
 
 btnValider.addEventListener("click", () => {
     const codeEntre = inputCode.value.trim();
-    if (codeEntre === codeChateau3) {
-        localStorage.setItem("chateau3_access", "true");
+
+    if (codeEntre === codeChateau1) {
         message.innerText = "Code correct ! Vous pouvez visiter le château.";
-        document.getElementById("validation-code").style.display = "none";
+        validationBloc.style.display = "none";
         contenuChateau.style.display = "block";
     } else {
         message.innerText = "Code incorrect. Essayez à nouveau.";
@@ -28,8 +26,4 @@ btnValider.addEventListener("click", () => {
 const btnQCM = document.getElementById("btn-qcm");
 btnQCM.addEventListener("click", () => {
     window.location.href = "qcm3.html";
-});
-
-window.addEventListener("beforeunload", () => {
-    localStorage.removeItem("chateau3_access");
 });
