@@ -1,4 +1,4 @@
-const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbwgbGsRnDZsWNAf609JURw4Qz9IFGX0CZ9Noz6XOVZpPCp9YJtopjsx7a-3OGQ5djWK/exec";
+const SHEET_ENDPOINT = "https://script.google.com/macros/s/AKfycbzrIrCZFvWbG5FmJxnxemVmhzFTZ5URv00KHrCkR1g5tMizfbWuuithK5PjbzXQYRqS/exec";
 
 function getEquipe() {
   return localStorage.getItem("equipe_nom") || "inconnue";
