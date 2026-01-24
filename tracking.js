@@ -1,4 +1,4 @@
-const SHEET_ENDPOINT = "COLLE_ICI_TON_URL_EXEC";
+const SHEET_ENDPOINT = "Chttps://script.google.com/macros/s/AKfycbwgbGsRnDZsWNAf609JURw4Qz9IFGX0CZ9Noz6XOVZpPCp9YJtopjsx7a-3OGQ5djWK/exec";
 
 function getEquipe() {
   return localStorage.getItem("equipe_nom") || "inconnue";
