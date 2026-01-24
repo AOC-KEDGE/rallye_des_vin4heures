@@ -27,3 +27,14 @@ btnValiderQCM.addEventListener("click", () => {
     alert("Votre score : " + score + " / 2\nVous allez être redirigé vers la page d'accueil.");
     window.location.href = "index.html";
 });
+
+// === RESET POUR TESTS (à enlever pour la version finale si tu veux) ===
+const resetBtn = document.getElementById("reset-test");
+if (resetBtn) {
+  resetBtn.addEventListener("click", () => {
+    localStorage.removeItem("chateau1_score"); // enlève le blocage
+    document.getElementById("resultat").innerText = "";
+    document.getElementById("valider-qcm").disabled = false;
+    alert("Reset OK : tu peux refaire le QCM 1.");
+  });
+}
