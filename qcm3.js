@@ -23,7 +23,20 @@ btnValiderQCM.addEventListener("click", () => {
         }
     }
 
-    localStorage.setItem("chateau1_score", score);
+    localStorage.setItem("chateau3_score", score);
     alert("Votre score : " + score + " / 2\nVous allez être redirigé vers la page d'accueil.");
+    logEvent({ chateau: "chateau3", event: "qcm_valide", score });
     window.location.href = "index.html";
 });
+
+// === RESET POUR TESTS (à enlever pour la version finale si tu veux) ===
+const resetBtn = document.getElementById("reset-test");
+if (resetBtn) {
+  resetBtn.addEventListener("click", () => {
+    localStorage.removeItem("chateau3_score"); // enlève le blocage
+    document.getElementById("resultat").innerText = "";
+    document.getElementById("valider-qcm").disabled = false;
+    alert("Reset OK : tu peux refaire le QCM 3.");
+  });
+}
+
