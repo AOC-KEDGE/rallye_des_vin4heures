@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QCM Château 2</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QCM – Château Bellevue</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>QCM Château 2</h1>
-    </header>
+  <header class="site-header">
+    <h1>QCM – Château Bellevue</h1>
+    <p class="subtitle">Répondez une seule fois</p>
+  </header>
 
-    <main>
-        <form id="form-qcm2">
-            <p>1. Quelle est la couleur principale du château ?</p>
-            <label><input type="radio" name="q1" value="A"> Rouge</label><br>
-            <label><input type="radio" name="q1" value="B"> Bleu</label><br>
-            <label><input type="radio" name="q1" value="C"> Vert</label><br>
+  <main class="card">
+    <form id="form-qcm2">
+      <h2>Questions</h2>
 
-            <p>2. En quelle année a été construit le château ?</p>
-            <label><input type="radio" name="q2" value="A"> 1600</label><br>
-            <label><input type="radio" name="q2" value="B"> 1700</label><br>
-            <label><input type="radio" name="q2" value="C"> 1800</label><br>
+      <p>1) Quel est le type de sol ?</p>
+      <label><input type="radio" name="q1" value="A"> Sableux</label><br>
+      <label><input type="radio" name="q1" value="B"> Argilo-calcaire</label><br>
+      <label><input type="radio" name="q1" value="C"> Granitique</label><br>
 
-            <br>
-            <button type="button" id="valider-qcm">Valider le QCM</button>
-        </form>
-        <button type="button" id="reset-test">🔁 Reset QCM (test)</button>
-        <p id="resultat"></p>
-    </main>
+      <p>2) Quel est le cépage principal ?</p>
+      <label><input type="radio" name="q2" value="A"> Cabernet Sauvignon</label><br>
+      <label><input type="radio" name="q2" value="B"> Sauvignon Blanc</label><br>
+      <label><input type="radio" name="q2" value="C"> Merlot</label><br>
 
-    <footer>
-        <p>© 2026 Visite des Châteaux</p>
-    </footer>
+      <p>3) Quelle est la surface du vignoble ?</p>
+      <label><input type="radio" name="q3" value="A"> 3 hectares</label><br>
+      <label><input type="radio" name="q3" value="B"> 5 hectares</label><br>
+      <label><input type="radio" name="q3" value="C"> 8 hectares</label><br>
 
-    <script src="tracking.js"></script>
-    <script src="qcm2.js"></script>
+      <p id="resultat" class="message"></p>
 
+      <button type="button" id="valider-qcm" class="btn btn-primary">Valider le QCM</button>
+      <button type="button" id="reset-test" class="btn btn-ghost">🔁 Reset (test)</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Rallye Œnologique</p>
+  </footer>
+
+  <script src="tracking.js"></script>
+  <script src="qcm2.js"></script>
 </body>
 </html>

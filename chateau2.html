@@ -1,40 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Château 2</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Château Bellevue</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Château 2</h1>
-    </header>
+  <header class="site-header">
+    <h1>Château Bellevue</h1>
+    <p class="subtitle">Saint-Émilion Grand Cru Classé</p>
+  </header>
 
-    <!-- Formulaire de validation du code -->
-    <section id="validation-code">
-        <h2>Entrez le code de votre équipe :</h2>
-        <input type="text" id="code-chateau" placeholder="Code équipe" required>
-        <button id="valider-code">Valider</button>
-        <p id="message-code"></p>
-    </section>
+  <!-- Identification équipe (si tu gardes ce flow) -->
+  <section id="validation-code" class="card">
+    <h2>Entrez le code de votre équipe</h2>
+    <div class="row">
+      <input type="text" id="code-chateau" placeholder="Code équipe" required>
+      <button id="valider-code" class="btn">Valider</button>
+    </div>
+    <p id="message-code" class="message"></p>
+  </section>
 
-    <!-- Contenu du château, caché tant que le code n'est pas validé -->
-    <main id="contenu-chateau" style="display:none;">
-        <section>
-            <img src="images/chateau2.jpg" alt="Château 2">
-            <p>Description du Château 2.</p>
-        </section>
+  <!-- Contenu du château -->
+  <main id="contenu-chateau" class="card" style="display:none;">
+    <img class="hero-img" src="images/chateau_bellevue.jpg" alt="Château Bellevue">
 
-        <button id="btn-qcm">Accéder au QCM</button>
-    </main>
+    <h2>À propos</h2>
+    <p>
+      L’histoire de cette belle chartreuse remonte au XVIIème siècle, lorsque le « Fief de Bellevue » appartenait à la Famille Lacaze. Louis Horeau, cousin germain de Jean Lacaze reprend la propriété en 1938. A sa mort, ses gendres Jacques Pradel de Lavaux et René de Coninck lui succèdent. En 2007, la Famille de Coninck vend sa part au Château Angelus, lequel se trouve ainsi aux cotés de la Famille Pradel de Lavaux pour exploiter ce lieu magique et rempli d’histoire. Nommé à la tête de l’exploitation en l’an 2000, Nicolas Thienpont, assisté de Stéphane Derenoncourt, entreprend des travaux d’amélioration du drainage et de l’entretien des sols. Dans le prolongement de ce travail, l’équipe du Château Angelus a veillé aujourd’hui à la destinée de la propriété, sur le vignoble et au chai de 2007 à 2022.
+    </p>
 
-    <footer>
-        <p>© 2026 Visite des Châteaux</p>
-    </footer>
+    <div class="infos-grid">
+      <div class="info">
+        <span class="label">Type de sol</span>
+        <span class="value">Argilo-calcaire</span>
+      </div>
+      <div class="info">
+        <span class="label">Cépage principal</span>
+        <span class="value">Merlot</span>
+      </div>
+      <div class="info">
+        <span class="label">Surface</span>
+        <span class="value">3 hectares</span>
+      </div>
+    </div>
 
-    <script src="tracking.js"></script>
-    <script src="chateau2.js"></script>
+    <button id="btn-qcm" class="btn btn-primary">Accéder au QCM</button>
+  </main>
 
+  <footer class="site-footer">
+    <p>© AOC KEDGE Bordeaux</p>
+  </footer>
+
+  <script src="tracking.js"></script>
+  <script src="chateau2.js"></script>
 </body>
 </html>
