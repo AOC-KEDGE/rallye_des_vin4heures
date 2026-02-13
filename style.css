@@ -56,12 +56,12 @@ a{ color: inherit; }
   display:flex;
   align-items:center;
   gap:12px;
-  height: 56px;              /* ↑ plus grand qu'avant */
+  height: 70px;              /* ↑ plus grand qu'avant */
 }
 
 /* Base logo : plus grand, sans fond/padding/bordure */
 .brand-logo{
-  height: 56px;              /* ↑ taille principale */
+  height: 70px;              /* ↑ taille principale */
   width: auto;
   object-fit: contain;
   display:block;             /* supprime décalage baseline */
@@ -74,13 +74,13 @@ a{ color: inherit; }
 
 /* Ajustement visuel : RV4H paraissant souvent plus petit, on le booste */
 .brand-logo--rv4h{
-  height: 60px;              /* un poil plus grand */
+  height: 78px;              /* un poil plus grand */
 }
 
 /* Ajustement : logo AOC souvent très large => on limite sa largeur */
 .brand-logo--aoc{
-  height: 52px;              /* un poil plus petit */
-  max-width: 140px;          /* évite qu'il prenne toute la place */
+  height: 56px;              /* un poil plus petit */
+  max-width: 160px;          /* évite qu'il prenne toute la place */
 }
 
 .brand-title{
