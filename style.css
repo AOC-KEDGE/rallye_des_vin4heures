@@ -75,12 +75,12 @@ a{ color: inherit; }
 
 /* Ajustement visuel : RV4H paraissant souvent plus petit, on le booste */
 .brand-logo--rv4h{
-  height: 78px;              /* un poil plus grand */
+  height: 70px;              /* un poil plus grand */
 }
 
 /* Ajustement : logo AOC souvent très large => on limite sa largeur */
 .brand-logo--aoc{
-  height: 56px;              /* un poil plus petit */
+  height: 70px;              /* un poil plus petit */
   max-width: 160px;          /* évite qu'il prenne toute la place */
 }
 
