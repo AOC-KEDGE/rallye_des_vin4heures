@@ -1,3 +1,8 @@
+html, body{
+  width: 100%;
+  overflow-x: hidden;
+}
+
 :root{
   --bordeaux:#7b1e2b;
   --bordeaux-dark:#5e1320;
@@ -75,7 +80,7 @@ a{ color: inherit; }
 
 /* Ajustement visuel : RV4H paraissant souvent plus petit, on le booste */
 .brand-logo--rv4h{
-  height: 68px;              /* un poil plus grand */
+  height: 65px;              /* un poil plus grand */
 }
 
 /* Ajustement : logo AOC souvent très large => on limite sa largeur */
@@ -314,26 +319,42 @@ input[type="text"]{
 
 @media (max-width: 720px){
 
+  .header-inner{
+    max-width: 100%;
+  }
+
   .brand{
-    gap: 8px;
+    max-width: 100%;
+    flex: 1;
+    gap: 10px;
+    overflow: hidden;          /* évite débordement */
   }
 
   .brand-title{
-    font-size: 16px;     /* plus petit sur mobile */
-    white-space: nowrap;
+    font-size: 16px;
+    white-space: normal;       /* ✅ autorise retour à la ligne */
+    line-height: 1.15;
+    text-wrap: balance;
   }
 
+  /* Empêche les images de pousser le titre hors écran */
   .brand-logo{
-    height: 38px;        /* logos plus petits */
+    height: 40px;
+    flex: 0 0 auto;
   }
 
   .brand-logo--rv4h{
-    height: 42px;
+    height: 44px;
   }
 
   .brand-logo--aoc{
-    height: 36px;
-    max-width: 100px;
+    height: 38px;
+    max-width: 110px;
   }
 
+  .nav{
+    width: 100%;
+    justify-content: flex-start;
+    gap: 6px;
+  }
 }
