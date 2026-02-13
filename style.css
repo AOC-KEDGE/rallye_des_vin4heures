@@ -85,7 +85,7 @@ a{ color: inherit; }
 
 /* Ajustement : logo AOC souvent très large => on limite sa largeur */
 .brand-logo--aoc{
-  height: 63px;              /* un poil plus petit */
+  height: 60px;              /* un poil plus petit */
   max-width: 160px;          /* évite qu'il prenne toute la place */
 }
 
@@ -320,46 +320,39 @@ input[type="text"]{
 @media (max-width: 720px){
 
   .header-inner{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px 12px;   /* un peu plus d'air */
+    padding: 12px 10px;
   }
 
   .brand{
-    flex-direction: column;
+    flex-direction: row;          /* reste sur une ligne */
     align-items: center;
-    justify-content: center;
-    gap: 12px;
+    justify-content: center;      /* centre horizontalement */
+    gap: 10px;
     width: 100%;
   }
 
   .brand-title{
-    font-size: 24px;      /* plus impactant */
-    line-height: 1.2;
-    text-align: center;
+    font-size: 16px;              /* réduit juste ce qu’il faut */
+    white-space: nowrap;          /* reste sur une ligne */
+    line-height: 1;
   }
 
   .brand-logo{
-    height: 64px;
+    height: 34px;                 /* réduit proportionnellement */
   }
 
   .brand-logo--rv4h{
-    height: 60px;         /* légèrement dominant */
+    height: 38px;                 /* toujours un peu plus grand */
   }
 
   .brand-logo--aoc{
-    height: 50px;
-    max-width: 170px;
+    height: 32px;
+    max-width: 90px;
   }
 
   .nav{
-    width: 100%;
-    display: flex;
-    justify-content: center;  /* centre les boutons */
-    margin-top: 14px;
-    gap: 12px;
+    justify-content: center;
+    margin-top: 8px;
   }
 
 }
