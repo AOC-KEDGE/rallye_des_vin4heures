@@ -3,22 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rallye des Vin'4Heures – Accueil</title>
-  <meta property="og:title" content="Rallye des Vin'4Heures">
-  <meta property="og:description" content="Événement œnologique organisé par AOC KEDGE Bordeaux.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://aoc-kedge.github.io/rallye_des_vin4heures/images/logorv4h.png">
-  <meta property="og:url" content="https://aoc-kedge.github.io/rallye_des_vin4heures/">
+  <title>Rallye des Vin'4Heures</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Open Graph (Snapchat / réseaux) -->
+  <meta property="og:title" content="Rallye des Vin'4Heures">
+  <meta property="og:description" content="Un week-end convivial organisé par AOC KEDGE Bordeaux : visites, dégustations et jeux.">
+  <meta property="og:type" content="website">
 </head>
 
 <body>
-  <header class="site-header header-flex">
-    <img src="images/logorv4h.png" alt="Logo événement" class="header-logo">
-
-    <div class="header-title">
-      <h1>Rallye Œnologique</h1>
-      <p class="subtitle">AOC KEDGE Bordeaux</p>
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <img src="images/logorv4h.jpeg" class="topbar-logo" alt="Logo RV4H">
+      <div class="topbar-title">
+        <div class="topbar-name">Rallye des Vin'4Heures</div>
+        <div class="topbar-sub">AOC KEDGE Bordeaux</div>
+      </div>
     </div>
 
     <button type="button" id="menu-toggle" class="menu-btn" aria-expanded="false" aria-controls="dropdown-menu">
@@ -26,47 +28,80 @@
     </button>
   </header>
 
+  <!-- MENU -->
   <nav id="dropdown-menu" class="dropdown-menu" aria-hidden="true">
     <a href="chateaux.html">Châteaux</a>
     <a href="lots.html">Lots</a>
     <a href="partenaires.html">Partenaires</a>
   </nav>
 
+  <!-- HERO -->
+  <section class="hero" aria-label="Bannière">
+    <div class="hero-overlay"></div>
 
+    <div class="hero-content">
+      <p class="hero-kicker">🍷 Convivialité • Découverte • Dégustation</p>
+      <h1>Un week-end pour partager le vin, les rires et de beaux châteaux.</h1>
+      <p class="hero-lead">
+        Scannez les QR codes sur place pour accéder aux visites et aux QCM.
+        Ici, retrouvez le programme, les lots et nos remerciements.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn-hero" href="chateaux.html">Voir les châteaux</a>
+        <a class="btn-hero ghost" href="lots.html">Voir les lots</a>
+      </div>
+
+      <p class="hero-note">
+        (Les photos de l’édition précédente seront ajoutées ici.)
+      </p>
+    </div>
+  </section>
 
   <main class="container">
-    <section class="card simple-hero">
-      <h2 class="page-title">Bienvenue !</h2>
-      <p class="muted">
-        Ce site accompagne votre week-end : infos générales, lots et partenaires.
-        Les pages de visite des châteaux restent accessibles uniquement via QR code sur place.
+    <!-- Comment ça marche -->
+    <section class="card band">
+      <h2>Comment ça marche ?</h2>
+      <div class="steps">
+        <div class="step">1) Scanner le QR code du château</div>
+        <div class="step">2) Entrer le code équipe</div>
+        <div class="step">3) Profiter de la visite puis faire le QCM</div>
+      </div>
+    </section>
+
+    <!-- Teaser convivial -->
+    <section class="card band soft">
+      <h2>Le mot d’accueil</h2>
+      <p class="lead">
+        Bienvenue de la part de <strong>AOC KEDGE Bordeaux</strong> !
+        L’objectif : se retrouver, découvrir, échanger… et passer un super moment.
       </p>
     </section>
 
-    <section class="card">
-      <h3>Photos – édition précédente</h3>
-      <p class="muted">Tu ajouteras ici des photos du rallye de l’année dernière (bientôt).</p>
+    <!-- Accès rapides -->
+    <section class="grid grid-3 band">
+      <a class="card link-card" href="chateaux.html">
+        <div class="link-emoji">🏰</div>
+        <h3>Châteaux</h3>
+        <p class="muted">Liste des domaines visités ce week-end.</p>
+      </a>
 
-      <!-- Placeholder propre -->
-      <div class="grid grid-3" style="margin-top:12px;">
-        <div class="info">
-          <span class="label">Photo 1</span>
-          <span class="value">à venir</span>
-        </div>
-        <div class="info">
-          <span class="label">Photo 2</span>
-          <span class="value">à venir</span>
-        </div>
-        <div class="info">
-          <span class="label">Photo 3</span>
-          <span class="value">à venir</span>
-        </div>
-      </div>
+      <a class="card link-card" href="lots.html">
+        <div class="link-emoji">🏆</div>
+        <h3>Lots</h3>
+        <p class="muted">Récompenses pour le top 3.</p>
+      </a>
+
+      <a class="card link-card" href="partenaires.html">
+        <div class="link-emoji">🤝</div>
+        <h3>Partenaires</h3>
+        <p class="muted">Merci aux soutiens & châteaux donateurs.</p>
+      </a>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© Rallye des Vin'4Heures – AOC KEDGE Bordeaux</p>
+    <p>© 2026 Rallye des Vin'4Heures – AOC KEDGE Bordeaux</p>
   </footer>
 
   <script>
@@ -74,18 +109,12 @@
       const toggle = document.getElementById("menu-toggle");
       const menu = document.getElementById("dropdown-menu");
 
-      if (!toggle || !menu) {
-        console.error("Menu: éléments introuvables (IDs menu-toggle / dropdown-menu).");
-        return;
-      }
-
       toggle.addEventListener("click", () => {
         const isOpen = menu.classList.toggle("show");
         toggle.setAttribute("aria-expanded", String(isOpen));
         menu.setAttribute("aria-hidden", String(!isOpen));
       });
 
-    // (optionnel mais pratique) Ferme le menu quand on clique ailleurs
       document.addEventListener("click", (e) => {
         if (!menu.classList.contains("show")) return;
         if (e.target === toggle || menu.contains(e.target)) return;
