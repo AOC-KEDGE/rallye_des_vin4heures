@@ -85,7 +85,7 @@ a{ color: inherit; }
 
 /* Ajustement : logo AOC souvent très large => on limite sa largeur */
 .brand-logo--aoc{
-  height: 65px;              /* un poil plus petit */
+  height: 63px;              /* un poil plus petit */
   max-width: 160px;          /* évite qu'il prenne toute la place */
 }
 
@@ -336,7 +336,7 @@ input[type="text"]{
   }
 
   .brand-title{
-    font-size: 26px;      /* plus impactant */
+    font-size: 24px;      /* plus impactant */
     line-height: 1.2;
     text-align: center;
   }
@@ -346,11 +346,11 @@ input[type="text"]{
   }
 
   .brand-logo--rv4h{
-    height: 72px;         /* légèrement dominant */
+    height: 60px;         /* légèrement dominant */
   }
 
   .brand-logo--aoc{
-    height: 56px;
+    height: 50px;
     max-width: 170px;
   }
 
