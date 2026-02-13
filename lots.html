@@ -7,21 +7,29 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header header-flex">
-    <img src="images/logorv4h.jpeg" alt="Logo événement" class="header-logo">
-    <div class="header-title">
-      <h1>Lots</h1>
-      <p class="subtitle">Récompenses – Top 3</p>
+  <!-- HEADER BORDEAUX -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logorv4h.png"
+            class="brand-logo brand-logo--rv4h"
+            alt="Logo RV4H">
+        <span class="brand-title">
+          Rallye des Vin'4Heures
+        </span>
+        <img src="images/logoaoc.png"
+            class="brand-logo brand-logo--aoc"
+            alt="Logo AOC">
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <!-- Sur la page Accueil, on met aria-current="page" -->
+        <a class="nav-link" href="index.html">Accueil</a>
+        <a class="nav-link" href="chateaux.html">Châteaux</a>
+        <a class="nav-link" href="lots.html" aria-current="page">Lots</a>
+        <a class="nav-link" href="partenaires.html">Partenaires</a>
+      </nav>
     </div>
-    <img src="images/logoaoc.png" alt="Logo association" class="header-logo">
-    <title>Lots – Rallye des Vin'4Heures</title>
   </header>
-
-  <nav class="nav">
-    <a href="index.html">Accueil</a>
-    <a href="chateaux.html">Châteaux</a>
-    <a href="partenaires.html">Partenaires</a>
-  </nav>
 
   <main class="container">
     <section class="card">
