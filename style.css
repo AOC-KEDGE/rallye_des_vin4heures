@@ -66,6 +66,15 @@ a{ color: inherit; }
   font-weight: 900;
   letter-spacing: .2px;
   line-height: 1.1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-aoc{
+  height: 26px;
+  width: auto;
+  object-fit: contain;
 }
 
 .brand-subtitle{
