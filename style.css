@@ -126,19 +126,6 @@ a{ color: inherit; }
   opacity: 1;
 }
 
-/* Responsive : nav passe en dessous */
-@media (max-width: 720px){
-  .header-inner{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav{
-    width: 100%;
-    justify-content: flex-start;
-    gap: 6px;
-  }
-}
-
 /* ===== HERO (photo plein écran) ===== */
 .hero{
   position: relative;
@@ -321,60 +308,51 @@ input[type="text"]{
 
   .header-inner{
     padding: 12px 10px;
+    flex-direction: column;
+    align-items: center;      /* ✅ centre tout */
+    gap: 10px;
   }
 
   .brand{
-    flex-direction: row;          /* reste sur une ligne */
+    flex-direction: row;
     align-items: center;
-    justify-content: center;      /* centre horizontalement */
+    justify-content: center;  /* ✅ centre le bloc logo-titre-logo */
     gap: 10px;
     width: 100%;
   }
 
   .brand-title{
-    font-size: 16px;              /* réduit juste ce qu’il faut */
-    white-space: nowrap;          /* reste sur une ligne */
+    font-size: 16px;
+    white-space: nowrap;
     line-height: 1;
   }
 
-  .brand-logo{
-    height: 34px;                 /* réduit proportionnellement */
-  }
+  .brand-logo{ height: 34px; }
+  .brand-logo--rv4h{ height: 50px; }
+  .brand-logo--aoc{ height: 42px; max-width: 90px; }
 
-  .brand-logo--rv4h{
-    height: 50px;                 /* toujours un peu plus grand */
-  }
-
-  .brand-logo--aoc{
-    height: 42px;
-    max-width: 90px;
-  }
-
-  /* ... garde tes règles .header-inner / .brand / logos ... */
-
+  /* ✅ Ici on force 3 éléments sur la 1ère ligne, 2 sur la 2e */
   .nav{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
-    margin-top: 8px;
+    margin-top: 4px;
   }
 
-  /* On force l’ordre : ligne 1 = Accueil, Châteaux, Lots */
-  .nav-home{ order: 1; }
-  .nav-chateaux{ order: 2; }
-  .nav-lots{ order: 3; }
-
-  /* ligne 2 = Partenaires, AOC */
-  .nav-partenaires{ order: 4; }
-  .nav-aoc{ order: 5; }
-
-  /* Petite largeur uniforme pour que 3 liens rentrent mieux sur la 1ère ligne */
   .nav-link{
     padding: 7px 8px;
     font-size: 14px;
     white-space: nowrap;
+    flex: 0 0 calc((100% - 16px) / 3); /* ✅ 3 colonnes */
+    text-align: center;
+  }
+
+  /* Les 2 derniers passent sur la 2e ligne automatiquement,
+     et on les centre en leur donnant 50% */
+  .nav-partenaires,
+  .nav-aoc{
+    flex: 0 0 calc((100% - 8px) / 2);  /* ✅ 2 colonnes */
   }
 }
-
