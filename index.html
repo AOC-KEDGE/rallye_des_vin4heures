@@ -13,116 +13,48 @@
 </head>
 
 <body>
-  <!-- TOPBAR -->
-  <header class="topbar">
-    <div class="topbar-left">
-      <img src="images/logorv4h.jpeg" class="topbar-logo" alt="Logo RV4H">
-      <div class="topbar-title">
-        <div class="topbar-name">Rallye des Vin'4Heures</div>
-        <div class="topbar-sub">AOC KEDGE Bordeaux</div>
-      </div>
-    </div>
+  <!-- HEADER BORDEAUX -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Aller à l'accueil">
+        <img src="images/logorv4h.jpeg" class="brand-logo" alt="Logo RV4H">
+        <div class="brand-text">
+          <div class="brand-title">Rallye des Vin'4Heures</div>
+          <div class="brand-subtitle">AOC KEDGE Bordeaux</div>
+        </div>
+      </a>
 
-    <button type="button" id="menu-toggle" class="menu-btn" aria-expanded="false" aria-controls="dropdown-menu">
-      ☰
-    </button>
+      <nav class="nav" aria-label="Navigation principale">
+        <!-- Sur la page Accueil, on met aria-current="page" -->
+        <a class="nav-link" href="index.html" aria-current="page">Accueil</a>
+        <a class="nav-link" href="chateaux.html">Châteaux</a>
+        <a class="nav-link" href="lots.html">Lots</a>
+        <a class="nav-link" href="partenaires.html">Partenaires</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- MENU -->
-  <nav id="dropdown-menu" class="dropdown-menu" aria-hidden="true">
-    <a href="chateaux.html">Châteaux</a>
-    <a href="lots.html">Lots</a>
-    <a href="partenaires.html">Partenaires</a>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero" aria-label="Bannière">
+  <!-- HERO PHOTO PLEIN ÉCRAN -->
+  <section class="hero" aria-label="Photo du rallye">
     <div class="hero-overlay"></div>
-
     <div class="hero-content">
-      <p class="hero-kicker">🍷 Convivialité • Découverte • Dégustation</p>
-      <h1>Un week-end pour partager le vin, les rires et de beaux châteaux.</h1>
-      <p class="hero-lead">
-        Scannez les QR codes sur place pour accéder aux visites et aux QCM.
-        Ici, retrouvez le programme, les lots et nos remerciements.
-      </p>
-
-      <div class="hero-cta">
-        <a class="btn-hero" href="chateaux.html">Voir les châteaux</a>
-        <a class="btn-hero ghost" href="lots.html">Voir les lots</a>
-      </div>
-
-      <p class="hero-note">
-        (Les photos de l’édition précédente seront ajoutées ici.)
-      </p>
+      <h1>Rallye des Vin'4Heures</h1>
+      <p>Un week-end convivial entre visites, dégustations et jeux.</p>
     </div>
   </section>
 
+  <!-- CONTENU (EXPLICATIONS + À COMPLÉTER PLUS TARD) -->
   <main class="container">
-    <!-- Comment ça marche -->
-    <section class="card band">
-      <h2>Comment ça marche ?</h2>
-      <div class="steps">
-        <div class="step">1) Scanner le QR code du château</div>
-        <div class="step">2) Entrer le code équipe</div>
-        <div class="step">3) Profiter de la visite puis faire le QCM</div>
-      </div>
-    </section>
-
-    <!-- Teaser convivial -->
-    <section class="card band soft">
-      <h2>Le mot d’accueil</h2>
-      <p class="lead">
-        Bienvenue de la part de <strong>AOC KEDGE Bordeaux</strong> !
-        L’objectif : se retrouver, découvrir, échanger… et passer un super moment.
+    <section class="content-block">
+      <h2>À propos du rallye</h2>
+      <p>
+        Ici, nous mettrons les explications du rallye plus tard : déroulé, règles, infos pratiques, etc.
       </p>
-    </section>
-
-    <!-- Accès rapides -->
-    <section class="grid grid-3 band">
-      <a class="card link-card" href="chateaux.html">
-        <div class="link-emoji">🏰</div>
-        <h3>Châteaux</h3>
-        <p class="muted">Liste des domaines visités ce week-end.</p>
-      </a>
-
-      <a class="card link-card" href="lots.html">
-        <div class="link-emoji">🏆</div>
-        <h3>Lots</h3>
-        <p class="muted">Récompenses pour le top 3.</p>
-      </a>
-
-      <a class="card link-card" href="partenaires.html">
-        <div class="link-emoji">🤝</div>
-        <h3>Partenaires</h3>
-        <p class="muted">Merci aux soutiens & châteaux donateurs.</p>
-      </a>
     </section>
   </main>
 
   <footer class="site-footer">
     <p>© 2026 Rallye des Vin'4Heures – AOC KEDGE Bordeaux</p>
   </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggle = document.getElementById("menu-toggle");
-      const menu = document.getElementById("dropdown-menu");
-
-      toggle.addEventListener("click", () => {
-        const isOpen = menu.classList.toggle("show");
-        toggle.setAttribute("aria-expanded", String(isOpen));
-        menu.setAttribute("aria-hidden", String(!isOpen));
-      });
-
-      document.addEventListener("click", (e) => {
-        if (!menu.classList.contains("show")) return;
-        if (e.target === toggle || menu.contains(e.target)) return;
-        menu.classList.remove("show");
-        toggle.setAttribute("aria-expanded", "false");
-        menu.setAttribute("aria-hidden", "true");
-      });
-    });
-  </script>
 </body>
 </html>
