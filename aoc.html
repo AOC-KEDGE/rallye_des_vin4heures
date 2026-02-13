@@ -3,15 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rallye des Vin'4Heures</title>
+  <title>Partenaires – Rallye des Vin'4Heures</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Open Graph (Snapchat / réseaux) -->
-  <meta property="og:title" content="Rallye des Vin'4Heures">
-  <meta property="og:description" content="Un week-end convivial organisé par AOC KEDGE Bordeaux : visites, dégustations et jeux.">
-  <meta property="og:type" content="website">
 </head>
-
 <body>
   <!-- HEADER BORDEAUX -->
   <header class="site-header">
@@ -29,36 +23,46 @@
       </a>
       <nav class="nav" aria-label="Navigation principale">
         <!-- Sur la page Accueil, on met aria-current="page" -->
-        <a class="nav-link" href="index.html" aria-current="page">Accueil</a>
+        <a class="nav-link" href="index.html">Accueil</a>
         <a class="nav-link" href="chateaux.html">Châteaux</a>
         <a class="nav-link" href="lots.html">Lots</a>
         <a class="nav-link" href="partenaires.html">Partenaires</a>
-        <a class="nav-link" href="aoc.html">AOC</a>
+        <a class="nav-link" href="aoc.html" aria-current="page">AOC</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO PHOTO PLEIN ÉCRAN -->
-  <section class="hero" aria-label="Photo du rallye">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Rallye des Vin'4Heures</h1>
-      <p>Un week-end convivial entre visites, dégustations et jeux.</p>
-    </div>
-  </section>
-
-  <!-- CONTENU (EXPLICATIONS + À COMPLÉTER PLUS TARD) -->
   <main class="container">
-    <section class="content-block">
-      <h2>À propos du rallye</h2>
-      <p>
-        Ici, nous mettrons les explications du rallye plus tard : déroulé, règles, infos pratiques, etc.
+    <section class="card">
+      <h2 class="page-title">Remerciements</h2>
+      <p class="muted">
+        Merci aux partenaires et aux châteaux ayant fourni des bouteilles dégustées durant le week-end.
       </p>
+
+      <div class="grid grid-2" style="margin-top:12px;">
+        <div class="card">
+          <h3>Partenaires</h3>
+          <ul class="list">
+            <li>Partenaire 1</li>
+            <li>Partenaire 2</li>
+            <li>Partenaire 3</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Châteaux donateurs</h3>
+          <ul class="list">
+            <li>Château Martinet</li>
+            <li>Château Bellevue</li>
+            <li>Château Bonalgue</li>
+          </ul>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 Rallye des Vin'4Heures – AOC KEDGE Bordeaux</p>
+    <p>© 2026 Rallye Œnologique – AOC KEDGE Bordeaux</p>
   </footer>
 </body>
 </html>
