@@ -129,7 +129,7 @@ a{ color: inherit; }
 /* ===== HERO (photo plein écran) ===== */
 .hero{
   position: relative;
-  min-height: calc(100vh - 60px); /* approx hauteur header */
+  min-height: calc(100vh - 100px); /* approx hauteur header */
   display:flex;
   align-items:flex-end;
   padding: 22px 12px;
