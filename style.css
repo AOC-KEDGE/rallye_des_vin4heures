@@ -350,9 +350,31 @@ input[type="text"]{
     max-width: 90px;
   }
 
+  /* ... garde tes règles .header-inner / .brand / logos ... */
+
   .nav{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 8px;
     margin-top: 8px;
   }
 
+  /* On force l’ordre : ligne 1 = Accueil, Châteaux, Lots */
+  .nav-home{ order: 1; }
+  .nav-chateaux{ order: 2; }
+  .nav-lots{ order: 3; }
+
+  /* ligne 2 = Partenaires, AOC */
+  .nav-partenaires{ order: 4; }
+  .nav-aoc{ order: 5; }
+
+  /* Petite largeur uniforme pour que 3 liens rentrent mieux sur la 1ère ligne */
+  .nav-link{
+    padding: 7px 8px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
 }
+
