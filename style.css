@@ -45,39 +45,48 @@ a{ color: inherit; }
 
 .brand{
   display:flex;
-  align-items:center; /* aligne logos + texte sur la même ligne */
-  gap:10px;
+  align-items:center;
+  gap:12px;
   text-decoration:none;
   color: var(--white);
 }
 
+/* Conteneur des 2 logos : même hauteur, parfaitement centrés */
 .brand-logos{
   display:flex;
-  align-items:center;   /* aligne verticalement les deux images */
-  gap:10px;
-  height: 42px;         /* hauteur “référence” */
+  align-items:center;
+  gap:12px;
+  height: 56px;              /* ↑ plus grand qu'avant */
 }
 
+/* Base logo : plus grand, sans fond/padding/bordure */
 .brand-logo{
-  height: 42px;         /* même hauteur pour les deux */
+  height: 56px;              /* ↑ taille principale */
   width: auto;
   object-fit: contain;
-  display:block;        /* évite les petits décalages baseline */
+  display:block;             /* supprime décalage baseline */
+  background: transparent;   /* <-- au cas où */
+  padding: 0;                /* <-- au cas où */
+  border: 0;                 /* <-- au cas où */
+  border-radius: 0;          /* <-- pas de cadre arrondi */
+  box-shadow: none;          /* <-- pas d'effet */
 }
 
-/* Si le logo AOC est très “large”, on limite sa largeur */
+/* Ajustement visuel : RV4H paraissant souvent plus petit, on le booste */
+.brand-logo--rv4h{
+  height: 60px;              /* un poil plus grand */
+}
+
+/* Ajustement : logo AOC souvent très large => on limite sa largeur */
 .brand-logo--aoc{
-  max-width: 90px;      /* ajuste (70-120px selon ton logo) */
+  height: 52px;              /* un poil plus petit */
+  max-width: 140px;          /* évite qu'il prenne toute la place */
 }
-
 
 .brand-title{
   font-weight: 900;
   letter-spacing: .2px;
   line-height: 1.1;
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 .brand-subtitle{
