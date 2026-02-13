@@ -342,11 +342,11 @@ input[type="text"]{
   }
 
   .brand-logo--rv4h{
-    height: 38px;                 /* toujours un peu plus grand */
+    height: 50px;                 /* toujours un peu plus grand */
   }
 
   .brand-logo--aoc{
-    height: 32px;
+    height: 42px;
     max-width: 90px;
   }
 
