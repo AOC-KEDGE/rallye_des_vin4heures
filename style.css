@@ -263,3 +263,79 @@ input[type="text"]{
   border: 1px solid rgba(123,30,43,.25);
   background: rgba(123,30,43,.04);
 }
+
+/* ===== NAV MENU ===== */
+.nav{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  padding: 12px;
+  background: rgba(255,255,255,.12);
+  flex-wrap: wrap;
+}
+
+.nav a{
+  text-decoration:none;
+  color: white;
+  border: 1px solid rgba(255,255,255,.35);
+  padding: 10px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.nav a:hover{
+  background: rgba(255,255,255,.16);
+}
+
+/* ===== PAGE LAYOUT ===== */
+.container{
+  max-width: 980px;
+  margin: 18px auto;
+  padding: 0 12px;
+}
+
+.page-title{
+  margin: 8px 0 10px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 860px){
+  .grid-3{ grid-template-columns: repeat(3, 1fr); }
+  .grid-2{ grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ===== CARDS WITH SAME IMAGE SIZE ===== */
+.card-img{
+  width: 100%;
+  height: 200px;          /* <-- même hauteur pour toutes */
+  object-fit: cover;      /* <-- rogne proprement */
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  display:block;
+}
+
+.card-body{
+  margin-top: 10px;
+}
+
+.badge{
+  display:inline-block;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--bordeaux);
+  font-weight: 700;
+  font-size: 12px;
+  background:#fff;
+}
+
+.simple-hero{
+  text-align:center;
+  padding: 10px 4px;
+}
