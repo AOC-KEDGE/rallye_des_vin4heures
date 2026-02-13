@@ -339,3 +339,51 @@ input[type="text"]{
   text-align:center;
   padding: 10px 4px;
 }
+
+/* ===== MENU DÉROULANT ===== */
+
+.menu-btn{
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 22px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.dropdown-menu{
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  background: var(--bordeaux);
+  padding: 10px 0;
+}
+
+.dropdown-menu a{
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.dropdown-menu a:hover{
+  background: rgba(255,255,255,.15);
+}
+
+.dropdown-menu.show{
+  display: flex;
+}
+
+.home-btn{
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+  border: 2px solid white;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.home-btn:hover{
+  background: rgba(255,255,255,.15);
+}
