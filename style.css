@@ -72,7 +72,7 @@ a{ color: inherit; }
 }
 
 .brand-aoc{
-  height: 22px;       /* taille du logo */
+  height: 34px;       /* taille du logo */
   width: auto;
   object-fit: contain;
 }
