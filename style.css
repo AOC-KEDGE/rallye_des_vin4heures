@@ -46,18 +46,19 @@ a{ color: inherit; }
 .brand{
   display:flex;
   align-items:center;
-  gap:12px;
+  justify-content:flex-start;
+  gap:18px;                 /* espace entre logo / titre / logo */
   text-decoration:none;
   color: var(--white);
 }
 
-/* Conteneur des 2 logos : même hauteur, parfaitement centrés */
-.brand-logos{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  height: 70px;              /* ↑ plus grand qu'avant */
+.brand-title{
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: .4px;
+  white-space: nowrap;      /* évite que ça passe à la ligne */
 }
+
 
 /* Base logo : plus grand, sans fond/padding/bordure */
 .brand-logo{
@@ -81,12 +82,6 @@ a{ color: inherit; }
 .brand-logo--aoc{
   height: 56px;              /* un poil plus petit */
   max-width: 160px;          /* évite qu'il prenne toute la place */
-}
-
-.brand-title{
-  font-weight: 900;
-  letter-spacing: .2px;
-  line-height: 1.1;
 }
 
 .brand-subtitle{
