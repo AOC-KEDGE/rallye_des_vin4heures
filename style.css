@@ -43,24 +43,33 @@ a{ color: inherit; }
   gap: 14px;
 }
 
-/* Marque à gauche */
 .brand{
   display:flex;
-  align-items:center;
+  align-items:center; /* aligne logos + texte sur la même ligne */
   gap:10px;
-  text-decoration: none;
+  text-decoration:none;
   color: var(--white);
-  min-width: 220px;
+}
+
+.brand-logos{
+  display:flex;
+  align-items:center;   /* aligne verticalement les deux images */
+  gap:10px;
+  height: 42px;         /* hauteur “référence” */
 }
 
 .brand-logo{
-  height: 34px;
-  width: 34px;
-  border-radius: 10px;
-  background: white;
-  padding: 3px;
-  object-fit: cover;
+  height: 42px;         /* même hauteur pour les deux */
+  width: auto;
+  object-fit: contain;
+  display:block;        /* évite les petits décalages baseline */
 }
+
+/* Si le logo AOC est très “large”, on limite sa largeur */
+.brand-logo--aoc{
+  max-width: 90px;      /* ajuste (70-120px selon ton logo) */
+}
+
 
 .brand-title{
   font-weight: 900;
@@ -69,12 +78,6 @@ a{ color: inherit; }
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.brand-aoc{
-  height: 34px;       /* taille du logo */
-  width: auto;
-  object-fit: contain;
 }
 
 .brand-subtitle{
