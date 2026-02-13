@@ -77,6 +77,12 @@ a{ color: inherit; }
   object-fit: contain;
 }
 
+.brand-aoc{
+  height: 22px;
+  opacity: 0.9;
+}
+
+
 .brand-subtitle{
   font-size: 12px;
   opacity: .9;
