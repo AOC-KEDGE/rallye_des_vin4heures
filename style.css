@@ -158,8 +158,8 @@ a{ color: inherit; }
 .hero-cta-btn{
   display: inline-block;
   margin-top: 24px;
-  background: var(--bordeaux);
-  color: white;
+  background: #ffd700; /* doré */
+  color: black;
   font-weight: 900;
   padding: 18px 36px;     /* plus grand */
   border-radius: 999px;
