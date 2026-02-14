@@ -369,3 +369,81 @@ input[type="text"]{
     text-align: center;
   }
 }
+
+/* ===== PROGRAMME (bulles + photos alternées) ===== */
+.programme{
+  max-width: 980px;
+  margin: 24px auto 0;
+  padding: 0 12px 18px;
+}
+
+.programme-title{
+  margin: 0 0 14px;
+  color: var(--text);
+}
+
+.prog-row{
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 14px;
+  align-items: center;
+  margin: 14px 0;
+}
+
+.prog-row.reverse{
+  grid-template-columns: 0.85fr 1.15fr;
+}
+
+.prog-row.reverse .prog-bubble{
+  grid-column: 2;
+}
+.prog-row.reverse .prog-photo{
+  grid-column: 1;
+}
+
+.prog-bubble{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.prog-bubble h3{
+  margin: 0 0 8px;
+  color: var(--bordeaux);
+  font-weight: 900;
+}
+
+.prog-bubble p{
+  margin: 0;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.prog-photo{
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: block;
+}
+
+/* Mobile : on empile (bulle puis photo), mais on garde l'alternance visuelle */
+@media (max-width: 720px){
+  .prog-row,
+  .prog-row.reverse{
+    grid-template-columns: 1fr;
+  }
+
+  .prog-row.reverse .prog-bubble,
+  .prog-row.reverse .prog-photo{
+    grid-column: auto;
+  }
+
+  .prog-photo{
+    aspect-ratio: 16 / 10;
+  }
+}
