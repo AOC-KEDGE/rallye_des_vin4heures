@@ -151,26 +151,29 @@ a{ color: inherit; }
   margin: 0 auto;
   width: 100%;
   color: white;
+  text-align: center;   /* ✅ centre tout */
 }
+
 
 .hero-cta-btn{
   display: inline-block;
-  margin-top: 18px;
+  margin-top: 24px;
   background: var(--bordeaux);
   color: white;
   font-weight: 900;
-  padding: 14px 26px;
+  padding: 18px 36px;     /* plus grand */
   border-radius: 999px;
   text-decoration: none;
-  font-size: 18px;
-  box-shadow: 0 8px 25px rgba(0,0,0,.25);
+  font-size: 20px;        /* plus visible */
+  box-shadow: 0 12px 35px rgba(0,0,0,.35);
   transition: all 0.2s ease;
 }
 
 .hero-cta-btn:hover{
   background: var(--bordeaux-dark);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
+
 
 /* ===== LAYOUT ===== */
 .container{
@@ -359,5 +362,10 @@ input[type="text"]{
   .nav-partenaires,
   .nav-aoc{
     flex: 0 0 calc((100% - 8px) / 2);  /* ✅ 2 colonnes */
+  }
+  
+  .hero-cta-btn{
+    width: 100%;
+    text-align: center;
   }
 }
