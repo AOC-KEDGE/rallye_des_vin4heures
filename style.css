@@ -447,3 +447,13 @@ input[type="text"]{
     aspect-ratio: 16 / 10;
   }
 }
+
+.prog-list{
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.prog-list li{
+  margin-bottom: 6px;
+}
