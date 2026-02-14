@@ -99,8 +99,8 @@ a{ color: inherit; }
 .nav{
   display:flex;
   align-items:center;
-  gap: 10px;
-  flex-wrap: wrap;
+  gap: 18px;
+  flex-wrap: nowrap;
   justify-content: flex-end;
 }
 
@@ -339,30 +339,21 @@ input[type="text"]{
   .brand-logo--rv4h{ height: 50px; }
   .brand-logo--aoc{ height: 42px; max-width: 90px; }
 
-  /* ✅ Ici on force 3 éléments sur la 1ère ligne, 2 sur la 2e */
-  .nav{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 4px;
-  }
+.nav{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;          /* autorise retour ligne */
+  justify-content: center;
+  gap: 8px;
+  margin-top: 6px;
+}
 
-  .nav-link{
-    padding: 7px 8px;
-    font-size: 14px;
-    white-space: nowrap;
-    flex: 0 0 calc((100% - 16px) / 3); /* ✅ 3 colonnes */
-    text-align: center;
-  }
-
-  /* Les 2 derniers passent sur la 2e ligne automatiquement,
-     et on les centre en leur donnant 50% */
-  .nav-partenaires,
-  .nav-aoc{
-    flex: 0 0 calc((100% - 8px) / 2);  /* ✅ 2 colonnes */
-  }
+.nav-link{
+  flex: 0 0 calc(100% / 3); /* 🔥 3 éléments par ligne */
+  text-align: center;
+  padding: 7px 4px;
+  font-size: 14px;
+}
   
   .hero-cta-btn{
     width: 100%;
