@@ -195,16 +195,23 @@ a{ color: inherit; }
   justify-content:center;
   gap: 8px;
 
-  background: #ffd700;
-  color: black;
+  background: rgba(255,255,255,.10);
+  color: var(--white);
   font-weight: 900;
   padding: 14px 18px;
   border-radius: 999px;
   text-decoration: none;
   font-size: 16px;
-  box-shadow: 0 12px 35px rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.25);
+  backdrop-filter: blur(6px);
   transition: transform .15s ease, background .15s ease;
 }
+
+.hero-cta-btn:hover{
+  background: rgba(255,255,255,.16);
+  transform: translateY(-2px);
+}
+
 
 .hero-cta-btn:hover{
   background: var(--bordeaux-dark);
