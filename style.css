@@ -748,3 +748,11 @@ main{ display:block; }
 .prog-list li{
   margin-bottom: 6px;
 }
+
+/* Badges lisibles sur fond blanc (dans les cards) */
+.card .badge{
+  background: rgba(123,0,0,.08);
+  border: 1px solid rgba(123,0,0,.18);
+  color: var(--bordeaux);
+  backdrop-filter: none;
+}
