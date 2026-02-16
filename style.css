@@ -680,61 +680,36 @@ main{ display:block; }
 
 .prog-row{
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 24px;              /* un peu plus d’espace */
-  align-items: start;     /* ✅ aligne en haut au lieu de centrer */
-  margin: 32px 0;         /* plus d’air entre les sections */
+  grid-template-columns: 1.15fr 0.85fr;   /* ✅ même gabarit tout le temps */
+  gap: 24px;
+  align-items: start;
+  margin: 32px 0;
 }
 
+/* ✅ au lieu de changer les colonnes, on inverse juste l'ordre */
+.prog-row.reverse{
+  grid-template-columns: 0.85fr 1.15fr;   /* on garde ton "look" */
+}
+
+/* ✅ MAIS on force l'alignement haut dans les 2 cas */
 .prog-bubble,
 .prog-photo{
-  align-self: start;    /* sécurité supplémentaire */
+  align-self: start;
 }
 
-.prog-photo{
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  display: block;
-}
-
-
+/* ✅ Et SURTOUT : on enlève les grid-column qui peuvent créer des effets bizarres */
+.prog-row.reverse .prog-bubble{ grid-column: auto; }
+.prog-row.reverse .prog-photo{ grid-column: auto; }
+/* ✅ Inversion propre via order (marche avec grid si on passe en flex… donc on fait autrement) */
 .prog-row.reverse{
-  grid-template-columns: 0.85fr 1.15fr;
+  direction: rtl;         /* inverse visuellement les colonnes */
 }
 
-.prog-row.reverse .prog-bubble{ grid-column: 2; }
-.prog-row.reverse .prog-photo{ grid-column: 1; }
-
-.prog-bubble{
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 16px;
-  box-shadow: var(--shadow);
+.prog-row.reverse > *{
+  direction: ltr;         /* remet le texte dans le bon sens */
 }
 
-.prog-bubble h3{
-  margin: 0 0 8px;
-  color: var(--bordeaux);
-  font-weight: 900;
-}
 
-.prog-bubble p{
-  margin: 0;
-  line-height: 1.55;
-  color: var(--text);
-}
-
-.prog-photo{
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  display: block;
-}
 
 @media (max-width: 720px){
   .prog-row,
