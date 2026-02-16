@@ -694,8 +694,15 @@ main{ display:block; }
 /* ✅ MAIS on force l'alignement haut dans les 2 cas */
 .prog-bubble,
 .prog-photo{
-  align-self: start;
+  width: 100%;
+  height: 280px;          /* ✅ taille contrôlée */
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: block;
 }
+
 
 /* ✅ Et SURTOUT : on enlève les grid-column qui peuvent créer des effets bizarres */
 .prog-row.reverse .prog-bubble{ grid-column: auto; }
@@ -723,8 +730,9 @@ main{ display:block; }
   }
 
   .prog-photo{
-    aspect-ratio: 16 / 10;
-  }
+  height: 200px;
+}
+
 }
 
 .prog-list{
