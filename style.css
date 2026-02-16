@@ -681,10 +681,23 @@ main{ display:block; }
 .prog-row{
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 14px;
-  align-items: center;
-  margin: 14px 0;
+  gap: 24px;              /* un peu plus d’espace */
+  align-items: start;     /* ✅ aligne en haut au lieu de centrer */
+  margin: 32px 0;         /* plus d’air entre les sections */
 }
+
+.prog-bubble,
+.prog-photo{
+  align-self: start;    /* sécurité supplémentaire */
+}
+
+.prog-photo{
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
 
 .prog-row.reverse{
   grid-template-columns: 0.85fr 1.15fr;
