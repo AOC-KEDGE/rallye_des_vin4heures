@@ -680,61 +680,57 @@ main{ display:block; }
 
 .prog-row{
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;   /* ✅ même gabarit tout le temps */
+  grid-template-columns: 1.15fr 0.85fr;   /* PC OK */
   gap: 24px;
   align-items: start;
   margin: 32px 0;
 }
 
-/* ✅ au lieu de changer les colonnes, on inverse juste l'ordre */
+/* PC : tu gardes ton "look" + inversion via RTL */
 .prog-row.reverse{
-  grid-template-columns: 0.85fr 1.15fr;   /* on garde ton "look" */
+  grid-template-columns: 0.85fr 1.15fr;
+  direction: rtl;   /* inverse visuellement les colonnes sur PC */
+}
+.prog-row.reverse > *{
+  direction: ltr;   /* remet le texte dans le bon sens */
 }
 
-/* ✅ MAIS on force l'alignement haut dans les 2 cas */
-.prog-bubble,
+/* ✅ IMPORTANT : la bulle ne doit PAS avoir une hauteur fixe */
+.prog-bubble{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  align-self: start;
+  min-width: 0;
+}
+
+.prog-bubble h3{
+  margin: 0 0 8px;
+  color: var(--bordeaux);
+  font-weight: 900;
+}
+
+.prog-bubble p{
+  margin: 0;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+/* ✅ Photo uniquement : taille contrôlée */
 .prog-photo{
   width: 100%;
-  height: 280px;          /* ✅ taille contrôlée */
+  height: 280px;          /* PC : plus petit que "géant" */
   object-fit: cover;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
   display: block;
+  align-self: start;
 }
 
-
-/* ✅ Et SURTOUT : on enlève les grid-column qui peuvent créer des effets bizarres */
-.prog-row.reverse .prog-bubble{ grid-column: auto; }
-.prog-row.reverse .prog-photo{ grid-column: auto; }
-/* ✅ Inversion propre via order (marche avec grid si on passe en flex… donc on fait autrement) */
-.prog-row.reverse{
-  direction: rtl;         /* inverse visuellement les colonnes */
-}
-
-.prog-row.reverse > *{
-  direction: ltr;         /* remet le texte dans le bon sens */
-}
-
-
-
-@media (max-width: 720px){
-  .prog-row,
-  .prog-row.reverse{
-    grid-template-columns: 1fr;
-  }
-
-  .prog-row.reverse .prog-bubble,
-  .prog-row.reverse .prog-photo{
-    grid-column: auto;
-  }
-
-  .prog-photo{
-  height: 200px;
-}
-
-}
-
+/* Listes */
 .prog-list{
   margin: 0;
   padding-left: 20px;
@@ -745,7 +741,33 @@ main{ display:block; }
   margin-bottom: 6px;
 }
 
-/* Badges lisibles sur fond blanc (dans les cards) */
+/* Empêche les liens/texte longs (Instagram etc.) de déborder */
+.prog-bubble a,
+.prog-bubble li,
+.prog-bubble p{
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Mobile : on empile + on annule le RTL pour garder l’ordre bulle -> photo */
+@media (max-width: 720px){
+  .prog-row,
+  .prog-row.reverse{
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 18px 0;
+  }
+
+  /* ✅ annule l'inversion RTL sur mobile (sinon l'ordre peut se retourner) */
+  .prog-row.reverse{ direction: ltr; }
+  .prog-row.reverse > *{ direction: ltr; }
+
+  .prog-photo{
+    height: 200px;
+  }
+}
+
+/* ===== Badges lisibles sur fond blanc (dans les cards) ===== */
 .card .badge{
   background: rgba(123,0,0,.08);
   border: 1px solid rgba(123,0,0,.18);
@@ -753,6 +775,7 @@ main{ display:block; }
   backdrop-filter: none;
 }
 
+/* ===== Page AOC ===== */
 .page-title{
   margin: 0 0 10px;
 }
@@ -768,4 +791,13 @@ main{ display:block; }
   width: auto;
   padding: 10px 14px;
   border-radius: 999px;
+}
+
+/* Mobile : boutons Insta en pleine largeur (plus clean) */
+@media (max-width: 720px){
+  .aoc-links{ width: 100%; }
+  .aoc-btn{
+    width: 100%;
+    justify-content: center;
+  }
 }
