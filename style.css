@@ -756,3 +756,20 @@ main{ display:block; }
   color: var(--bordeaux);
   backdrop-filter: none;
 }
+
+.page-title{
+  margin: 0 0 10px;
+}
+
+.aoc-links{
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.aoc-btn{
+  width: auto;
+  padding: 10px 14px;
+  border-radius: 999px;
+}
