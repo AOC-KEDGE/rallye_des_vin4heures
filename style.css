@@ -207,11 +207,13 @@ a{ color: inherit; }
   transition: transform .15s ease, background .15s ease;
 }
 
-.hero-cta-btn:hover{
-  background: rgba(255,255,255,.16);
-  transform: translateY(-2px);
+@media (min-width: 860px){
+  .hero-cta-btn{
+    font-size: 20px;      /* plus gros texte */
+    padding: 20px 36px;   /* plus d’espace */
+    gap: 12px;            /* espace icône/texte */
+  }
 }
-
 
 .hero-cta-btn:hover{
   background: var(--bordeaux-dark);
