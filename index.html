@@ -60,6 +60,58 @@
       
       </div>
     </section>
+    
+    <!-- TEASER (chargé uniquement au clic) -->
+<section class="teaser" aria-label="Teaser de l'évènement">
+  <div class="container">
+    <div class="section-head">
+      <h2>Le teaser</h2>
+      <p>Plonge dans l’ambiance du Rallye des Vin'4Heures.</p>
+    </div>
+
+    <div class="yt-lite"
+         data-id="8-1MS4XFO4A"
+         role="button"
+         tabindex="0"
+         aria-label="Lire le teaser">
+      <span class="yt-play" aria-hidden="true">▶</span>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  const makeIframe = (id) => {
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+    iframe.title = "Teaser Rallye des Vin'4Heures";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.allowFullscreen = true;
+    iframe.loading = "lazy";
+    return iframe;
+  };
+
+  const activate = (el) => {
+    const id = el.dataset.id;
+    el.replaceChildren(makeIframe(id));
+    el.classList.add("is-active");
+  };
+
+  document.querySelectorAll(".yt-lite").forEach((el) => {
+    const id = el.dataset.id;
+    el.style.backgroundImage = `url("https://i.ytimg.com/vi/${id}/hqdefault.jpg")`;
+
+    el.addEventListener("click", () => activate(el));
+    el.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        activate(el);
+      }
+    });
+  });
+})();
+</script>
+
 
     <!-- CHIFFRES CLÉS -->
     <section class="stats" aria-label="Chiffres clés">
