@@ -38,13 +38,6 @@ a{ color: inherit; }
   border-bottom: 1px solid rgba(255,255,255,.14);
 }
 
-.site-header-chateaux{
-  position: relative;
-  background: var(--bordeaux);
-  color: var(--white);
-  border-bottom: 1px solid rgba(255,255,255,.14);
-}
-
 .header-inner{
   max-width: 980px;
   margin: 0 auto;
@@ -52,6 +45,23 @@ a{ color: inherit; }
   display:flex;
   align-items:center;
   justify-content: space-between;
+  gap: 14px;
+}
+
+.site-header-chateaux{
+  position: relative;
+  background: var(--bordeaux);
+  color: var(--white);
+  border-bottom: 1px solid rgba(255,255,255,.14);
+}
+
+.header-inner-chateaux{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 10px 12px;
+  display:flex;
+  align-items:center;
+  justify-content: center;
   gap: 14px;
 }
 
