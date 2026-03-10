@@ -858,3 +858,8 @@ main{ display:block; }
   height: 100%;
   border: 0;
 }
+
+/* ===== Page lots, tirets ===== */
+ul {
+  list-style-type: "• ";
+}
