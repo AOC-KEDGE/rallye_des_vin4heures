@@ -1,58 +1,75 @@
-// On capture l'heure d'arrivée AU CHARGEMENT (scan QR) mais on n'envoie rien encore
-const heureArrivee = new Date().toLocaleTimeString("fr-FR", {
-  hour: "2-digit",
-  minute: "2-digit",
-  second: "2-digit",
-});
+const CHATEAU_ID = "chateau1"; // 👉 changer juste ça pour chaque page
 
-// Codes équipes (test)
-const codesEquipes = {
-  equipe1: "EQUIPE1",
-  equipe2: "EQUIPE2",
-  equipe3: "EQUIPE3",
-};
+const btnCode = document.getElementById("btn-code");
+const input = document.getElementById("code");
+const message = document.getElementById("message");
+const qcm = document.getElementById("qcm");
+const btnValider = document.getElementById("valider");
 
-const btnValider = document.getElementById("valider-code");
-const inputCode = document.getElementById("code-chateau");
-const message = document.getElementById("message-code");
-const contenuChateau = document.getElementById("contenu-chateau");
-const validationBloc = document.getElementById("validation-code");
+// Heure arrivée (scan QR)
+const heureArrivee = new Date().toLocaleTimeString("fr-FR");
 
-// Toujours demander le code équipe
-validationBloc.style.display = "block";
-contenuChateau.style.display = "none";
+// Vérifie si déjà fait
+if (localStorage.getItem(CHATEAU_ID + "_score")) {
+  message.innerText = "Vous avez déjà répondu.";
+  btnCode.disabled = true;
+}
 
-btnValider.addEventListener("click", () => {
-  const codeEntre = inputCode.value.trim();
+// Validation code équipe
+btnCode.addEventListener("click", () => {
+  const codeEntre = input.value.trim();
 
   const equipeTrouvee = Object.keys(codesEquipes).find(
-    (nomEquipe) => codesEquipes[nomEquipe] === codeEntre
+    (nom) => codesEquipes[nom] === codeEntre
   );
 
   if (equipeTrouvee) {
-    // On stocke l'équipe pour le QCM juste après
     localStorage.setItem("equipe_nom", equipeTrouvee);
 
-    // ✅ Log "arrivée scan" AVEC l'équipe + l'heure du scan (capturée au chargement)
+    // Log arrivée
     logEvent({
-      chateau: "chateau1",
+      chateau: CHATEAU_ID,
       event: "arrivee_scan_qr",
       extra: { heure_arrivee: heureArrivee },
     });
 
-    // (Optionnel) si tu ne veux pas de ligne en plus, on peut supprimer ce log
-    // logEvent({ chateau: "chateau1", event: "equipe_identifiee" });
-
-    message.innerText = "Équipe reconnue : " + equipeTrouvee;
-    validationBloc.style.display = "none";
-    contenuChateau.style.display = "block";
+    message.innerText = "Bienvenue " + equipeTrouvee;
+    qcm.style.display = "block";
   } else {
-    message.innerText = "Code équipe incorrect. Essayez à nouveau.";
+    message.innerText = "Code incorrect";
   }
 });
 
-// Bouton QCM
-document.getElementById("btn-qcm").addEventListener("click", () => {
-  window.location.href = "qcm1.html";
-});
+// Validation QCM
+btnValider.addEventListener("click", () => {
+  if (localStorage.getItem(CHATEAU_ID + "_score")) return;
 
+  let score = 0;
+
+  const reponses = {
+    q1: "B",
+    q2: "B",
+    q3: "B",
+  };
+
+  for (let q in reponses) {
+    const radios = document.getElementsByName(q);
+    for (let r of radios) {
+      if (r.checked && r.value === reponses[q]) {
+        score++;
+      }
+    }
+  }
+
+  localStorage.setItem(CHATEAU_ID + "_score", score);
+
+  logEvent({
+    chateau: CHATEAU_ID,
+    event: "qcm_valide",
+    score,
+  });
+
+  alert("Score : " + score + "/3");
+
+  window.location.href = "index.html";
+});

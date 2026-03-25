@@ -5,9 +5,18 @@ function getEquipe() {
 }
 
 function logEvent({ chateau, event, score = "", extra = {} }) {
+  const equipe = getEquipe();
+
+  if (!equipe || equipe === "inconnue") return;
+
   const payload = {
-    equipe: getEquipe(),
-    timestamp: new Date().toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", second: "2-digit" }),
+    equipe,
+    timestamp: new Date().toLocaleTimeString("fr-FR", {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit"
+    }),
+    timestamp_full: new Date().toISOString(),
     chateau,
     event,
     score,

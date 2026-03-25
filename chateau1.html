@@ -1,82 +1,33 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rallye des Vin'4Heures</title>
-  <link rel="stylesheet" href="style.css" />
+<section class="card">
+  <h2>Château Martinet</h2>
 
-  <!-- Open Graph (Snapchat / réseaux) -->
-  <meta property="og:title" content="Rallye des Vin'4Heures">
-  <meta property="og:description" content="Un week-end convivial organisé par AOC KEDGE Bordeaux : visites, dégustations et jeux.">
-  <meta property="og:type" content="website">
-</head>
+  <h3>Entrez votre code équipe</h3>
+  <input type="text" id="code" placeholder="Code équipe">
+  <button id="btn-code">Valider</button>
+  <p id="message"></p>
 
-<body>
-  <!-- HEADER BORDEAUX -->
-  <header class="site-header-chateaux">
-    <div class="header-inner-chateaux">
-      <a class="brand" href="index.html">
-        <img src="images/logorv4h.png"
-            class="brand-logo brand-logo--rv4h"
-            alt="Logo RV4H">
-        <span class="brand-title">
-          Rallye des Vin'4Heures
-        </span>
-        <img src="images/logoaoc.png"
-            class="brand-logo brand-logo--aoc"
-            alt="Logo AOC">
-      </a>
-    </div>
-  </header>
+  <form id="qcm" style="display:none;">
+    <h3>QCM</h3>
 
+    <p>1) Quel est le type de sol ?</p>
+    <label><input type="radio" name="q1" value="A"> Sableux</label><br>
+    <label><input type="radio" name="q1" value="B"> Argilo-calcaire</label><br>
+    <label><input type="radio" name="q1" value="C"> Granitique</label><br>
 
-  <!-- Identification équipe (si tu gardes ce flow) -->
-  <section id="validation-code" class="card">
-    <h2>Entrez le code de votre équipe</h2>
-    <div class="row">
-      <input type="text" id="code-chateau" placeholder="Code équipe" required>
-      <button id="valider-code" class="btn">Valider</button>
-    </div>
-    <p id="message-code" class="message"></p>
-  </section>
+    <p>2) Cépage principal ?</p>
+    <label><input type="radio" name="q2" value="A"> Cabernet</label><br>
+    <label><input type="radio" name="q2" value="B"> Merlot</label><br>
+    <label><input type="radio" name="q2" value="C"> Sauvignon</label><br>
 
-  <!-- Contenu du château -->
-  <main id="contenu-chateau" class="card" style="display:none;">
-    <img class="hero-img" src="images/chateau_martinet.jpg" alt="Château Martinet">
+    <p>3) Surface ?</p>
+    <label><input type="radio" name="q3" value="A"> 10ha</label><br>
+    <label><input type="radio" name="q3" value="B"> 17ha</label><br>
+    <label><input type="radio" name="q3" value="C"> 30ha</label><br>
 
-    <h2>À propos</h2>
-    <p>
-      Belle demeure du XVIIIe siècle, le Château Martinet a longtemps été un relais de chasse avant de devenir
-      une exploitation viticole produisant l’un des crus les plus renommés de Saint-Émilion. Plantées sur un sol
-      sablo-graveleux d’une qualité remarquable, les vignes font l’objet d’une attention de tous les instants.
-      Régulièrement récompensés lors de concours internationaux, les vins laissent exhaler des senteurs subtiles,
-      avec des accents de fruits rouges.
-    </p>
+    <button type="button" id="valider">Valider</button>
+  </form>
+</section>
 
-    <div class="infos-grid">
-      <div class="info">
-        <span class="label">Type de sol</span>
-        <span class="value">Argilo-calcaire</span>
-      </div>
-      <div class="info">
-        <span class="label">Cépage principal</span>
-        <span class="value">Merlot</span>
-      </div>
-      <div class="info">
-        <span class="label">Surface</span>
-        <span class="value">17 hectares</span>
-      </div>
-    </div>
-
-    <button id="btn-qcm" class="btn btn-primary">Accéder au QCM</button>
-  </main>
-
-  <footer class="site-footer">
-    <p>© Rallye des Vin'4Heures – AOC KEDGE Bordeaux</p>
-  </footer>
-
-  <script src="tracking.js"></script>
-  <script src="chateau1.js"></script>
-</body>
-</html>
+<script src="equipes.js"></script>
+<script src="tracking.js"></script>
+<script src="qcm.js"></script>
