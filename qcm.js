@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const CHATEAU_ID = "chateau1";
+  const CHATEAU_ID = window.location.pathname.split("/").pop().replace(".html", "");
 
   const btnCode = document.getElementById("btn-code");
   const input = document.getElementById("code");
@@ -54,11 +54,13 @@ document.addEventListener("DOMContentLoaded", () => {
   btnValider.addEventListener("click", () => {
     let score = 0;
 
-    const reponses = {
-      q1: "B",
-      q2: "B",
-      q3: "B",
-    };
+    const toutesLesReponses = {
+  chateau1: { q1: "B", q2: "B", q3: "B" },
+  chateau2: { q1: "A", q2: "C", q3: "B" }, // 👈 à adapter
+  chateau3: { q1: "C", q2: "A", q3: "B" },
+};
+
+const reponses = toutesLesReponses[CHATEAU_ID];
 
     for (let q in reponses) {
       const radios = document.getElementsByName(q);
