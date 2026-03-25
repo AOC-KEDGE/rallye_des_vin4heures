@@ -58,7 +58,18 @@ document.addEventListener("DOMContentLoaded", () => {
   chateau1: { q1: "B", q2: "B", q3: "B" },
   chateau2: { q1: "A", q2: "C", q3: "B" }, // 👈 à adapter
   chateau3: { q1: "C", q2: "A", q3: "B" },
+  chateau4: { q1: "B", q2: "B", q3: "B" },
+  chateau5: { q1: "A", q2: "C", q3: "B" },
+  chateau6: { q1: "C", q2: "A", q3: "B" },
+  chateau7: { q1: "B", q2: "B", q3: "B" },
+  chateau8: { q1: "A", q2: "C", q3: "B" },
+  chateau9: { q1: "C", q2: "A", q3: "B" },
+  chateau10: { q1: "B", q2: "B", q3: "B" },
+  chateau11: { q1: "A", q2: "C", q3: "B" },
+  chateau12: { q1: "C", q2: "A", q3: "B" },
+  chateau13: { q1: "C", q2: "A", q3: "B" },
 };
+
 
 const reponses = toutesLesReponses[CHATEAU_ID];
 

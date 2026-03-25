@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Château Teyssier – Rallye</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="images/logorv4h.png" class="brand-logo">
+        <span class="brand-title">Rallye des Vin'4Heures</span>
+        <img src="images/logoaoc.png" class="brand-logo">
+      </div>
+    </div>
+  </header>
+
+  <main class="card">
+
+    <h2>Château Teyssier 🍷</h2>
+
+    <p class="subtitle">Entrez votre code équipe</p>
+
+    <input type="text" id="code" placeholder="Code équipe">
+    <button id="btn-code">Valider</button>
+
+    <p id="message"></p>
+
+    <form id="qcm" style="display:none;">
+      <h3>QCM</h3>
+
+      <p>1) Type de sol ?</p>
+      <label><input type="radio" name="q1" value="A"> Sableux</label>
+      <label><input type="radio" name="q1" value="B"> Argilo-calcaire</label>
+      <label><input type="radio" name="q1" value="C"> Granitique</label>
+
+      <p>2) Cépage principal ?</p>
+      <label><input type="radio" name="q2" value="A"> Cabernet</label>
+      <label><input type="radio" name="q2" value="B"> Merlot</label>
+      <label><input type="radio" name="q2" value="C"> Sauvignon</label>
+
+      <p>3) Surface ?</p>
+      <label><input type="radio" name="q3" value="A"> 10ha</label>
+      <label><input type="radio" name="q3" value="B"> 17ha</label>
+      <label><input type="radio" name="q3" value="C"> 30ha</label>
+
+      <button type="button" id="valider">Valider</button>
+    </form>
+
+  </main>
+
+  <script src="equipes.js" defer></script>
+  <script src="tracking.js" defer></script>
+  <script src="qcm.js" defer></script>
+
+</body>
+</html>
