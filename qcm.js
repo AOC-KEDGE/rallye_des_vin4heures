@@ -65,9 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
   chateau8: { q1: "B", q2: "A", q3: "A", q4: "B", q5: "A", q6: "B" },
   chateau9: { q1: "C", q2: "A", q3: "C", q4: "B", q5: "B", q6: "A" },
   chateau10: { q1: "C", q2: "C", q3: "C", q4: "A", q5: "B", q6: "A" },
-  chateau11: { q1: "B", q2: "A", q3: "A", q4: "C", q5: "C", q6: "B" },
-  chateau12: { q1: "C", q2: "A", q3: "B", q4: "C", q5: "C", q6: "B" },
-  chateau13: { q1: "C", q2: "A", q3: "B", q4: "C", q5: "C", q6: "B" },
+  chateau11: { q1: "C", q2: "C", q3: "B", q4: "B", q5: "C", q6: "B" },
+  chateau12: { q1: "C", q2: "A", q3: "C", q4: "C", q5: "B", q6: "A" },
+  chateau13: { q1: "B", q2: "B", q3: "A", q4: "B", q5: "C", q6: "A" },
 };
 
 
