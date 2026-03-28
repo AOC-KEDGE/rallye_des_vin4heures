@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
   chateau4: { q1: "A", q2: "A", q3: "C", q4: "B", q5: "B", q6: "C" },
   chateau5: { q1: "C", q2: "A", q3: "A", q4: "B", q5: "B", q6: "C" },
   chateau6: { q1: "A", q2: "B", q3: "C", q4: "B", q5: "B", q6: "B" },
-  chateau7: { q1: "B", q2: "B", q3: "B", q4: "B", q5: "A", q6: "A" },
+  chateau7: { q1: "B", q2: "A", q3: "A", q4: "C", q5: "C", q6: "B" },
   chateau8: { q1: "A", q2: "C", q3: "B" },
   chateau9: { q1: "C", q2: "A", q3: "B" },
   chateau10: { q1: "B", q2: "B", q3: "B" },
@@ -90,7 +90,7 @@ const reponses = toutesLesReponses[CHATEAU_ID];
       score,
     });
 
-    alert("Score : " + score + "/3");
+    alert("Score : " + score + "/6");
 
     window.location.href = "index.html";
   });
