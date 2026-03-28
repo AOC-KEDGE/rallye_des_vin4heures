@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let score = 0;
 
     const toutesLesReponses = {
-  chateau1: { q1: "B", q2: "B", q3: "B", q4: "B", q5: "A", q6: "A" }, // 👈 à adapter
+  chateau1: { q1: "A", q2: "B", q3: "B", q4: "B", q5: "A", q6: "A" }, // 👈 à adapter
   chateau2: { q1: "A", q2: "C", q3: "A", q4: "C", q5: "B", q6: "A" }, // 👈 à adapter
   chateau3: { q1: "C", q2: "A", q3: "B", q4: "B", q5: "A", q6: "B" },
   chateau4: { q1: "A", q2: "A", q3: "C", q4: "B", q5: "B", q6: "C" },
