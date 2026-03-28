@@ -62,12 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
   chateau5: { q1: "C", q2: "A", q3: "A", q4: "B", q5: "B", q6: "C" },
   chateau6: { q1: "A", q2: "B", q3: "C", q4: "B", q5: "B", q6: "B" },
   chateau7: { q1: "B", q2: "A", q3: "A", q4: "C", q5: "C", q6: "B" },
-  chateau8: { q1: "A", q2: "C", q3: "B" },
-  chateau9: { q1: "C", q2: "A", q3: "B" },
-  chateau10: { q1: "B", q2: "B", q3: "B" },
-  chateau11: { q1: "A", q2: "C", q3: "B" },
-  chateau12: { q1: "C", q2: "A", q3: "B" },
-  chateau13: { q1: "C", q2: "A", q3: "B" },
+  chateau8: { q1: "B", q2: "A", q3: "A", q4: "B", q5: "A", q6: "B" },
+  chateau9: { q1: "C", q2: "A", q3: "C", q4: "B", q5: "B", q6: "A" },
+  chateau10: { q1: "C", q2: "C", q3: "C", q4: "A", q5: "B", q6: "A" },
+  chateau11: { q1: "B", q2: "A", q3: "A", q4: "C", q5: "C", q6: "B" },
+  chateau12: { q1: "C", q2: "A", q3: "B", q4: "C", q5: "C", q6: "B" },
+  chateau13: { q1: "C", q2: "A", q3: "B", q4: "C", q5: "C", q6: "B" },
 };
 
 
